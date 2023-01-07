@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #b6b0b0;
+    }
+    /* .one {
+        position: absolute;
+        width: 500px;
+        height: 600px;
+        border: 3px solid white;
+        margin-left: 30pc;
+        margin-top: 2pc;
+        border-radius: 16 px;
+        background-color: #E5E5E5;
+    } */
+
+    .container {
+        position: absolute;
+        width: 400px;
+        height: 560px;
+        margin-left: 34pc;
+        margin-top: 0pc;
+        border-radius: 10px;
+        /* border: 3px solid #ADEFD1FF; */
+        /* background-color: #00203FFF; */
+        background: black;
+        /* box-shadow: 102px 120px 120px black; */
+        /* box-shadow: rgba(0, 0, 0, 0.16)0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+        box-shadow: black 0px 10px 20px, black 0px 10px 10px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 6pc;
+        /* color: #00203FFF; */
+        color: black;
+    }
+
+    .p1,
+    .p2 {
+        color: brown;
+        font-size: 28px;
+        margin-left: 20px;
+        font-weight: 600;
+        margin-top: 0pc;
+    }
+
+    .p1 {
+        margin-top: 0pc;
+    }
+
+    #first-value,
+    #second-value {
+        width: 160px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 6px;
+        background-color: #cbcaca;
+        /* border: 2px solid #ADEFD1FF; */
+    }
+
+    .bt1,
+    .bt2,
+    .bt3,
+    .bt4,
+    .bt5,
+    .bt6 {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-top: 1pc;
+        margin-left: 3pc;
+        border-radius: 6px;
+        /* border: 6px solid #ADEFD1FF; */
+        border-radius: 70%;
+        background-color: #cbcaca;
+    }
+
+    .bt7 {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-top: 1pc;
+        margin-left: 180px;
+        border-radius: 6px;
+        /* border: 6px solid #ADEFD1FF; */
+        border-radius: 70%;
+        background-color: #cbcaca;
+    }
+
+    .bt1:hover,
+    .bt2:hover,
+    .bt3:hover,
+    .bt4:hover,
+    .bt5:hover,
+    .bt6:hover,
+    .bt7:hover {
+        background-color: #ADEFD1FF;
+    }
+
+    /* h2 {
+        color: brown;
+        font-size: 40px;
+        margin-top: 3pc;
+        margin-left: 7pc;
+    } */
+
+    .bt8 {
+        width: 300px;
+        height: 65px;
+        font-size: 28px;
+        margin-top: 2pc;
+        margin-left: 3pc;
+        border-radius: 6px;
+        background-color: #cbcaca;
+        /* border: 6px solid #ADEFD1FF; */
+    }
+</style>
+
+<body>
+
+    <div class="one">
+        <h1>CALCULATOR</h1>
+        <div class="container">
+            <h2><button class="bt8"><i id="res"></i></button></h2>
+            <div style="display: flex;">
+                <p class="p1"> <input type="text" placeholder="Enter the x variable value" id="first-value"></p>
+                <p class="p2"> <input type="text" placeholder="Enter the y variable value" id="second-value"></p>
+            </div>
+            <!-- <h1>Enter the Measurement <input type="text" id="third-value"></h1>
+        <button onclick="measure()">Fetch</button> -->
+            <i id="res1"></i>
+            <div>
+                <button class="bt1" onclick="add()">+</button>
+                <button class="bt2" onclick="sub()">-</button>
+                <button class="bt3" onclick="mul()">x</button>
+            </div>
+            <div>
+                <button class="bt4" onclick="div()">/</button>
+                <button class="bt5" onclick="per()">%</button>
+                <button class="bt6" onclick="square()">x<sup>2</sup></button>
+            </div>
+            <button class="bt7" onclick="cube()">x <sup>3</sup></button>
+
+        </div>
+    </div>
+</body>
+<script>
+    function measure() {
+        var x = parseInt(document.getElementById("third-value").value);
+        var y = x / 100;
+        document.getElementById("res1").innerHTML;
+    }
+    function add() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x + y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function sub() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x - y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function mul() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x * y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function div() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x / y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function per() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = (x / y) * 100;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function square() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x * x;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function cube() {
+        var x = parseInt(document.getElementById("first-value").value);
+        var y = parseInt(document.getElementById("second-value").value);
+        var sum = x * x * x;
+        document.getElementById("res").innerHTML = sum;
+    }
+
+
+</script>
+
+</html>
